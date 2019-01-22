@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+int a , Cube;
+ printf(" Please Enter any integer value : ");
+ scanf("%d", &a);
+ Cube = a * a * a ;
+ printf(" CUBE of number %d is = %d", a, Cube);
+  return 0;
+ }
