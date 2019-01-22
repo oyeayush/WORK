@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    unsigned int distance;
+    printf("Distance between 2 planets is:");
+    scanf("%u,&distance");
+    return 0;
+}
