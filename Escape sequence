@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("\nHello \bworld, I am \tAYUSH and \a i \rlove \fC language");
+    return 0;
+}
