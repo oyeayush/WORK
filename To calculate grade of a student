@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int marks;
+   printf("\nEnter Percentage of the student::");
+   scanf("%d",&marks);
+   if(marks>90 && marks<100){
+    printf("\nYOU HAVE GOT 'A' GRADE");
+   }
+   else if(marks>75 && marks<90){
+    printf("\nYOU HAVE GOT 'B' GRADE");
+    }
+    else if(marks>60 && marks<75){
+        printf("\nYOU HAVE GOT 'C' GRADE");
+    }
+    else if(marks>40 && marks<60){
+        printf("\nYOU HAVE GOT 'D' GRADE");
+    }
+    else{
+        printf("\nYOU HAVE FAILED");
+    }
+    return 0;
+   }
+
