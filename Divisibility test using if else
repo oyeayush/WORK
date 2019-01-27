@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, div;
+    printf("\nEnter the number::");
+    scanf("%d",&n);
+    printf("\nEnter the divisor::");
+    scanf("%d",&div);
+    if(n%div==0){
+        printf("Number is divisible ");
+    } else{
+    printf("Number is not divisible");
+    }
+    return 0;
+}
