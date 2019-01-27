@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char c;
+    printf("\nEnter the character::");
+    scanf("%c",&c);
+
+    if(c=='a'|| c=='e'|| c=='i'|| c=='o'|| c=='u'){
+        printf("Character is a vowel ");
+    } else{
+    printf("Character is a constant");
+    }
+    return 0;
+}
