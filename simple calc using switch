@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char operator;
+    double firstnumber,secondnumber;
+    printf("\nenter an operator(+, -, *, /):");
+    scanf("%c",&operator);
+    printf("\nenter first operands::");
+    scanf("%lf",&firstnumber);
+    printf("\nenter second number::");
+    scanf("%lf",&secondnumber);
+    switch(operator){
+    case '+' : printf("%lf + %lf = %lf",firstnumber,secondnumber,firstnumber+secondnumber);
+    break;
+    case '-' : printf("%lf - %lf = %lf",firstnumber,secondnumber,firstnumber-secondnumber);
+    break;
+    case '*' : printf("%lf * %lf = %lf",firstnumber,secondnumber,firstnumber*secondnumber);
+    break;
+    case '/' : printf("%lf / %lf = %lf",firstnumber,secondnumber,firstnumber/secondnumber);
+    break;
+    default : printf("invalid operation");}
+    return 0;
+}
