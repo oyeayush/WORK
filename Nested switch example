@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int a,b ;
+  a=1;
+  b=40;
+
+  switch(a){
+
+  case 0 : printf("You are broke");
+  break;
+
+  case 1 : printf("\nwe found some money");
+
+      switch(b){
+      case 10 : printf("\nYou can buy rose");
+      break;
+      case 20 : printf("\nYou can buy dairy milk");
+      break;
+      case 30 : printf("\nYou can buy 5star");
+      break;
+      case 40 : printf("\nYou can buy silk");
+      break;
+      }
+      break;
+      default : printf("Not recognised");
+      return 0;
+  }
+
+}
