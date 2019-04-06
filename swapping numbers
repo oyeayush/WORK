@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char name[20];
+    printf("\nenter name: ");
+    gets(name);
+    int len;
+    int i,j,temp;
+    i=0;
+    j=strlen(name);
+    while(i!=j)
+    {
+        temp=name[i];
+        name[i]=name[j];
+        name[j]=temp;
+        i++;
+        j--;
+        printf("\nSwapped name is : %s",name);
+}
+return 0;
+}
