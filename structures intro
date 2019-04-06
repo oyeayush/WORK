@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+ struct emp
+    {
+     int RNO;
+     char name[20];
+     float salary;
+    };
+    int main()
+    {
+    struct emp x;
+    printf("size of employers is : %d",sizeof(x));
+    return 0;
+}
