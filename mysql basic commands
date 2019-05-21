@@ -1,0 +1,54 @@
+CREATE TABLE 'company'.'employee'(
+'fname' VARCHAR(15) NOT NULL, 
+'lname' VARCHAR(15) NOT NULL,
+'ssn' VARCHAR(9) NOT NULL,
+'sex' CHAR(10) NULL,
+'salary' DECIMAL NULL,
+PRIMARY KEY ('ssn')); 
+
+CREATE TABLE 'company'.'department'(
+'dname' VARCHAR(20), 
+'dnumber' INT NOT NULL,
+'Mgr_ssn' CHAR(9) NOT NULL,
+'location' VARCHAR(50) NOT NULL,
+PRIMARY KEY ('Mgr_ssn'));
+
+USE company;
+
+CREATE TABLE 'project'(
+'pname' VARCHAR(30) NOT NULL,
+'pnumber' INT NOT NULL,
+'plocation' VARCHAR(50) NOT NULL,
+PRIMARY KEY ('pnumber'),
+UNIQUE ('pname'));
+
+INSERT INTO 'company'.'employee'(fname,fname,ssn,sex,salary) 
+VALUES ('Ayush','Chaturvedi','37','M','450000');
+
+INSERT INTO 'company'.'employee' 
+VALUES ('KK','Kambe','57','M','350000');
+
+INSERT INTO 'employee' 
+VALUES ('AT','KT','36','M','250000');
+
+INSERT INTO 'company'.'department'(dname,dnumber,Mgr_ssn,location)
+ VALUES ('it','1','a1','fifth wing');
+ 
+ INSERT INTO 'department'
+ VALUES ('bank','2','b1','third wing');
+ 
+  INSERT INTO 'department'
+ VALUES ('legal','3','c1','first wing');
+ 
+ ALTER TABLE 'department' ADD FOREIGN KEY('Mgr_ssn') REFERENCES 'employee' TABLE('ssn');
+ 
+ UPDATE 'employee'
+ SET salary='35000'
+ WHERE ssn='37';
+ 
+ DROP TABLE 'works-on';
+ 
+ DELETE FROM 'department' 
+ WHERE 'dnumber'=2;
+ 
+ 
