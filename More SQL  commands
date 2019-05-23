@@ -1,0 +1,44 @@
+ SELECT fname,lname
+ FROM 'employee' 
+ WHERE DNO=2;
+ 
+ SELECT pnum,fname,lnam,pno,ssn
+ FROM employee,department, project
+ where Dnum=Dnumber AND mg_ssn=ssn AND dlocation=2nd floor;
+ 
+ SELECT e.fname, e.lname, s.name, s.lname
+ FROM 'employee' AS e, 'suoerwiser' AS s
+ WHERE e.s_ssn=s.ssn;
+ 
+ SELECT distinct salary
+ FROM 'employee';
+ 
+SELECT fname,pno
+FROM 'employee','project';
+
+SELECT * 
+FROM 'employee','department'
+WHERE dname=finance;
+
+SELECT DISTINCT essn
+FROM 'employee'
+WHERE pno,esn IN(
+SELECT pno,ssn
+FROM project 
+WHERE esn=3221312422;
+
+SELECT fname,lname
+FROM employee
+WHERE sex LIKE= '%M, %f';  
+
+SELECT fname,lname
+FROM employee
+WHERE bdate LIKE= '%1960'%;
+
+SELECT *
+FROM employee
+WHERE (salary BETWEEN='10000' AND '60000');
+
+SELECT *
+FROM employee
+ORDER BY salary ASC;
