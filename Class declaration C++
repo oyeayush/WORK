@@ -1,0 +1,12 @@
+#include <iostream.h>
+#include <conio.h>
+
+    class stu  //stu is the class name
+    private:                //access specifiers
+{
+    int id;               //data members
+    char name[20];               //data members
+    public:               //access specifiers
+    void readstu();          //member functions
+    void showstu();                //member functions
+};
