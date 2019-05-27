@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+int add(int,int);
+int substr(int,int);
+int multiplies(int,int);
+int divides(int,int);
+
+int main()
+{
+     int x,y;
+     printf("Enter value of two numbers:");
+    scanf("%d%d",&x,&y);
+     int a,s,m,d;
+    a=add(x,y);
+    s=substr(x,y);
+    m=multiplies(x,y);
+    d=divides(x,y);
+    printf("SUM is %d",a);
+    printf("Substraction is %d",s);
+    printf("Multiplication is %d",m);
+    printf("Division is %d",d);
+
+}
+
+int add(int p, int q)
+{
+    int a;
+    a=p+q;
+    return a;
+
+}
+
+int substr(int p, int q)
+{
+    int s;
+    s=p-q;
+    return s;
+}
+
+int multiplies(int p, int q)
+{
+    int m;
+    m=p*q;
+    return m;
+
+}
+
+int divides(int p, int q)
+{
+    int d;
+    d=p/q;
+    return d;
+}
+
+
