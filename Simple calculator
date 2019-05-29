@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int choice;
+    int N1,N2;
+    int result;
+
+    cout<<"1.) Addition"<<endl;
+    cout<<"2.) Subtraction"<<endl;
+    cout<<"3.) Multiplication"<<endl;
+    cout<<"4.) Division"<<endl;
+    cout<<" Enter value of first number:"<<endl;
+    cin>>N1;
+    cout<<" Enter value of second number:"<<endl;
+    cin>>N2;
+    cout<<"Enter your choice:"<<endl;
+    cin>>choice;
+
+    switch(choice){
+    case 1:
+        {
+            result = N1 + N2;
+            cout<<"Your answer is:"<<N1+N2<<endl;
+            break;
+        }
+    case 2:
+        {
+            result = N1 - N2;
+            cout<<"Your answer is:"<<N1-N2<<endl;
+            break;
+        }
+    case 3:
+        {
+
+            result = N1 * N2;
+            cout<<"Your answer is:"<<N1*N2<<endl;
+            break;
+        }
+    case 4:
+        {
+            result = N1 / N2;
+            cout<<"Your answer is:"<<N1/N2<<endl;
+            cin>>result;
+            break;
+        }
+    }
+
+    return 0;
+
+
+}
