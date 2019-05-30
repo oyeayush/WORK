@@ -1,0 +1,42 @@
+#include <iostream>
+#include <fstream>
+#include<iomanip>
+
+
+using namespace std;
+
+int main()
+{
+    cout<<left;
+    string employee_name;
+    int employee_salary;
+
+    ifstream employee_file("Employee.txt");
+    if(employee_file.fail()){
+        cout<<"Employee text file not found"<<endl;
+        return -5;
+}
+    cout<<"HUMAN RESOURCE PAYROLL LIST"<<endl;
+    cout<<setw(35)<<"Full name"<<"Salary"<<endl;
+    employee_file.ignore(255,'\n');
+    employee_file.ignore(255,'\n');
+
+    // pre-read statements
+
+    getline(employee_file,employee_name, '|');
+    employee_file>>employee_salary;
+    while(employee_file.eof())
+    {
+
+        cout<< setw(25)<< employee_name<< employee_salary<<endl;
+        //postread
+
+        getline(employee_file,employee_name, '|');
+        employee_file>>employee_salary;
+
+
+    }
+
+
+    return 0;
+}
