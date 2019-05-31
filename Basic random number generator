@@ -1,0 +1,23 @@
+#include <iostream>
+#include <fstream>
+#include<stdlib.h>
+#include<time.h>
+
+
+using namespace std;
+int generate_randomno();
+
+int main()
+{
+
+   return generate_randomno();
+
+}
+
+int generate_randomno()
+{
+      srand(time(null));
+      int number = rand()%50 + 1;
+      return number;
+}
+
