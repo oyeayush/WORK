@@ -1,0 +1,34 @@
+#include <iostream>
+#include <fstream>
+#include<iomanip>
+
+using namespace std;
+
+void print_salary(int);
+void print_salary(string);
+void print_salary(double);
+
+int main()
+
+{
+    string salary;
+    cout<< "enter salary:"<<endl;
+    cin>>salary;
+    print_salary(salary);
+
+    return 0;
+}
+
+void print_salary(int x)
+{
+    cout<<x<<endl;
+}
+void print_salary(string x)
+{
+    cout<<x<<endl;
+}
+
+void print_salary(double x)
+{
+  cout<<x<<endl;
+}
