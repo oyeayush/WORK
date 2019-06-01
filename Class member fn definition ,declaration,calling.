@@ -1,0 +1,33 @@
+#include <iostream>
+#include<conio.h>
+
+using namespace std;
+
+class stu;   //class declaration
+
+
+class stu{
+   int id;
+   char name[20];
+   public:
+   void readstu()
+{                                        // fn definition as inside the class
+   cout<<"Enter stuid:","Name:";
+   cin>>id>>name;
+}
+   void showstu();
+   };  // fn declaration as it is outside the class
+
+void stu::showstu()     ///fn definiton
+{
+    cout<<"STuid="<<id<<endl;
+    cout<<"name="<<name;
+}
+
+int main()
+{
+    stu s;
+    s.readstu();     // fn calling
+    s.showstu();      // fn calling
+    return 0;
+}
