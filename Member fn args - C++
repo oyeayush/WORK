@@ -1,0 +1,41 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+class emp;                               //class declaration(not neccesary if same is already under
+
+
+class emp{
+   int empid;
+   char ename[20];
+   float sal;
+   public:
+   void getemp(int id, char name[20], float basic);   // fn definition as inside the class with args
+   void putemp();                                   //fn decalaration
+};
+
+   void emp::getemp(int id, char name[20], float basic)   //getemp is member of emp class
+   {
+       empid=id;
+       strcpy(ename, name);
+       sal=basic;
+   }
+
+
+   void emp::putemp()                                //fn definition
+   {
+       cout<<"Employee ID:"<<empid<<endl;
+       cout<<"Name:"<<ename<<endl;
+       cout<<"Salary:"<<sal<<endl;
+   }
+
+
+  int main()
+{
+    emp e1;                               //object
+    e1.getemp(37, "Ayush", 60000);          // fn calling
+    e1.putemp();                        // fn calling
+    return 0;
+}
