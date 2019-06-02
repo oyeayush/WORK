@@ -35,7 +35,7 @@ class emp{
   int main()
 {
     emp e1;                               //object
-    e1.getemp(37, "Ayush", 60000);          // fn calling
-    e1.putemp();                        // fn calling
+    e1.getemp(37, "Ayush", 60000);          // fn calling for input
+    e1.putemp();                        // fn calling for output
     return 0;
 }
