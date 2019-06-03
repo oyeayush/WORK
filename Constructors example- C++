@@ -1,0 +1,37 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+
+class circle
+{
+    float r;
+public:                           //constructor must be declared in public
+    circle()                      //constructor name= classname
+    {
+        r=37;
+    }
+
+    circle(float r)               //parameterized constructor
+    {
+        (*this).r = r;
+    }
+
+    void showarea()
+    {
+        cout<<"ARERA IS :"<< 3.14*r*r<<endl;
+    }
+};                             //closing of class
+
+int main()
+{
+    circle c1;
+    circle c2(120);
+    c1.showarea();
+    c2.showarea();
+
+}
+
+
