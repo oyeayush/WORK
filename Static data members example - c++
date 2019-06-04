@@ -1,0 +1,32 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+
+class sample
+{
+  static int count;
+    public:
+        sample()                                     //constructor
+        {
+            count++;
+            cout<<count<<"object created"<<endl;
+        }
+        ~sample()                                       //destructor
+        {
+            cout<<count<<"object deleted"<<endl;
+            count--;
+        }
+};
+
+int sample::count;                       //countdefine
+
+int main()    
+{
+    sample s1,s2,s3;
+
+
+
+}
