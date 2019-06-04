@@ -1,0 +1,28 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+
+class test{
+  public:
+      static void read(int x, int y)
+      {
+          if(x>y)
+            cout<<"x is big"<<endl;
+    else if(y>x)
+            cout<<"y is big"<<endl;
+          else
+            cout<<"both are equal"<<endl;
+      }
+};
+
+int main()
+{
+    test t1;
+    t1.read(5, 7);
+
+
+
+}
