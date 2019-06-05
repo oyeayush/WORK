@@ -1,0 +1,35 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+
+class stu
+{
+   int id;
+   char name[20];
+   public:
+       friend void operator>>(istream &in, stu &s)      //here istream is class of cin, in is the object or copy  of cin.
+       {
+           cout<<"enter stuid,name"<<endl;
+           in>>s.id>>s.name;                        //s is the object of stu class
+       }
+
+       friend void operator<<(ostream &out, stu &s)
+       {
+           cout<<"Stuid id:"<<s.id<<endl;
+           cout<<"Stuname is:"<<s.name<<endl;        //cout belongs to ostream class
+       }
+
+};
+
+
+
+int main()
+{
+    stu s;
+    cin>>s;
+    cout<<s;                  //cout will work omn user defined datatype
+
+}
