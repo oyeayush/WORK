@@ -1,0 +1,38 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+
+class test
+{
+    int a;
+    public:
+    test()                      //define constructor
+    {
+         a = 0;
+    }
+    void operator ++()            //unary operator, args empty - no explicit calling
+    {
+        a++;                   //operation
+    }
+    void operator--()
+    {
+        a--;
+    }
+    void show()
+    {
+        cout<<"a is :"<<a<<endl;
+    }
+};
+
+
+int main()
+{
+    test t;                    //object
+ ++t;
+    t.show();
+      --t;
+            t.show();
+}
