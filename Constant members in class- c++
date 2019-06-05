@@ -1,0 +1,35 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+
+class si{
+  float p;
+  int t;
+  const float r;
+  public:
+      si():r(2.5)                             //to initialize the constant data members
+      {
+
+      }
+      void read(float pa, int ti)
+      {
+          p=pa;
+          t=ti;
+      }
+      float show()
+      {
+          cout<<"SIMPLE INTEREST IS:"<<p*r*t/100<<endl;
+      }
+
+};
+
+int main()
+{
+    si s;
+    s.read(500,10);
+    s.show();
+
+}
