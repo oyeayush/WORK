@@ -1,0 +1,57 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+
+class stu                        //base class
+{
+   int id;
+   char name[20];
+   public:
+   void getstu()
+   {
+       cout<<"enter stuid"<<endl;
+       cin>>id;
+       cout<<"enter name"<<endl;
+       cin>>name;
+   }
+   void putstu()
+   {
+       cout<<"Stuid is:"<<id<<endl;
+       cout<<"Name i:"<<name<<endl;
+   }
+
+};
+
+class phy:private stu
+{
+    float h,w;
+public:
+    void getphy()
+    {
+            getstu();
+
+      cout<<"enter height:"<<endl;
+      cin>>h;
+      cout<<"enter weight:"<<endl;
+      cin>>w;
+    }
+    void putphy()
+    {
+            putstu();
+
+        cout<<"Height is:"<<h<<endl;
+        cout<<"weight is:"<<w<<endl;
+    }
+};
+
+
+int main()
+{
+    phy p;
+    p.getphy();                  //calling
+    p.putphy();
+
+}
