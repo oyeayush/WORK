@@ -1,0 +1,84 @@
+#include <iostream>
+#include<conio.h>
+#include<string>
+
+using namespace std;
+
+class acc                         //base class
+{
+    int accno;
+    char name[20];
+public:
+    void getacc()
+    {
+        cout<<"enter account number:"<<endl;
+        cin>>accno;
+        cout<<"enter account holder name:"<<endl;
+        cin>>name;
+    }
+    void showacc()
+    {
+        cout<<"Account number is:"<<accno<<endl;
+        cout<<"account holder name is:"<<name<<endl;
+    }
+};
+
+class savings:public acc
+{
+float bal;
+public:
+    void getbal()
+    {
+        cout<<"enter balance"<<endl;
+        cin>>bal;
+        if(bal<5000)
+            cout<<"minimum balance not reached"<<endl;
+        else
+            cout<<"account created"<<endl;
+    }
+    void showbal()
+    {
+        cout<<"Balance is:"<<bal;
+    }
+};
+
+class current:public acc
+{
+    float bal;
+public:
+    void getbal()
+    {
+        cout<<"enter balance:"<<endl;
+        cin>>bal;
+        if(bal<10000)
+            cout<<"savings account"<<endl;
+        else
+            cout<<"current account"<<endl;
+    }
+
+};
+
+int main()
+{
+    int op;
+    cout<<"1.savings account"<<endl;
+    cout<<"2.current account"<<endl;
+    cout<<"enter your choice:"<<endl;
+    cin>>op;
+    if(op==1)
+    {
+        savings s;
+        s.getacc();
+        s.getbal();
+        }
+        else if(op==2)
+        {
+            current c;
+            c.getacc();
+            c.getbal();
+            c.showacc();
+            }
+            else{
+                cout<<"invalid section"<<endl;           }
+
+}
