@@ -1,0 +1,68 @@
+#include <iostream>
+#include<conio.h>
+#include<string>
+
+using namespace std;
+
+class stu                         //base class
+{
+    int id;
+    char name[20];
+public:
+    void getstu()
+    {
+        cout<<"Enter stuid"<<endl;
+        cin>>id;
+        cout<<"enter name"<<endl;
+        cin>>name;
+    }
+    void showstu()
+    {
+        cout<<"Student id is:"<<id<<endl;
+        cout<<"Name is :"<<name<<endl;
+    }
+};
+
+class marks:public stu                             //derived class
+{
+  protected:
+      int m1,m2,m3;
+  public:
+    void getmarks()
+    {
+        cout<<"enter marks of 3 subjects"<<endl;
+        cin>>m1>>m2>>m3;
+    }
+    void showmarks()
+    {
+        cout<<"M1 marks are:"<<m1<<endl;
+        cout<<"M2 marks are:"<<m2<<endl;
+        cout<<"M3 marks are:"<<m3<<endl;
+
+    }
+};
+
+class result:public marks       //derived class: intermediate base class
+{
+protected:
+    float r;
+public:
+    void getresult()
+    {
+        r=m1+m2+m3/3;
+    }
+    void showresult()
+    {
+        cout<<"Result is :"<<r<<endl;
+    }
+};
+
+int main()
+{
+    result r1;
+    r1.getstu();
+    r1.getmarks();
+    r1.showstu();
+    r1.showmarks();
+    r1.showresult();
+}
