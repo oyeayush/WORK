@@ -1,0 +1,20 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+template <class t>
+t sum(t a, t b)                      //here t will depend on return type but can be used several times 
+                                         //without multiple declarations
+{
+    return a+b;
+}
+
+int main()
+{
+    cout<<"integer sum ="<<sum(8, 7)<<endl;                   //calling
+    cout<<"float sum ="<<sum(2.5, 7.5)<<endl;                   //calling
+    cout<<"double sum ="<<sum(444.7, 75.2)<<endl;                   //calling
+
+}
