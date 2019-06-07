@@ -1,0 +1,27 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+template <class t>
+t sum(t a, t b)                         //template declaration
+{
+    return a+b;
+}
+
+template <class t>
+t sum(t a, t b, t c)                    //overloading templates
+{
+    return a+b+c;
+}
+
+
+
+int main()
+{
+    cout<<"integer sum ="<<sum(8, 7)<<endl;                   //calling
+    cout<<"integer sum ="<<sum(2, 7, 10)<<endl;                   //calling
+    cout<<"float sum ="<<sum(444.7, 75.2, 55.7)<<endl;                   //calling
+
+}
