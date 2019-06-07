@@ -1,0 +1,38 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+int x=200;
+void fun()
+{
+class test                         //class defined inside a fn - local class
+{
+    int x;
+  public:
+      void show()
+      {
+          x=100;
+          cout<<"local x:"<<x<<endl;
+          cout<<"global x="<<::x<<endl;           //when '::' is used it will access the global variable
+      }
+protected:
+    float d1,d2;
+public:
+    void getdim()
+    {
+        cin>>d1>>d2;
+    }
+    virtual float area()=0;                 //pure virtual fn
+};
+};
+
+
+    test t;          //object creation is inside fn for local class
+    t.show();         //fn calling is inside fn for local class
+}
+
+int main()
+{
+    fun();               //calling
+}
