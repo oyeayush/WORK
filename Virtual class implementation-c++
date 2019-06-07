@@ -1,0 +1,52 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+class c1                         //base class
+{
+public:
+    void fnc1()
+    {
+        cout<<"c1 class function"<<endl;
+    }
+};
+
+class c2:public virtual c1
+{
+public:
+    void fnc2()
+  {
+
+    cout<<"c2 class function"<<endl;
+  }
+};
+
+class c3:public virtual c1
+{
+public:
+    void fnc3()
+{
+
+    cout<<"c3 class function"<<endl;
+}
+};
+
+class c4:public c2,public c3
+{
+public:
+    void fnc4(){
+    cout<<"c4 clas function"<<endl;
+    }
+
+};
+
+
+int main()
+{
+    c4 c;
+    c.fnc1();
+    c.fnc2();
+    c.fnc3();
+}
