@@ -1,0 +1,49 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+class shape                         //abstract base class
+{
+protected:
+    float d1,d2;
+public:
+    void getdim()
+    {
+        cin>>d1>>d2;
+    }
+    virtual float area()=0;                 //pure virtual fn
+};
+
+class traingle:public shape
+{
+public:
+   virtual float area()
+    {
+        return 0.5*d1*d2;
+    }
+};
+
+class rectangle:public shape
+{
+public:
+    virtual float area()
+    {
+    return d1*d2;
+
+    }
+};
+
+int main()
+{
+    traingle t;
+    cout<<"enter triangle base and height:"<<endl;
+    t.getdim();
+    cout<<"area of triangle is:"<<t.area()<<endl;
+    rectangle r;
+    cout<<"enter rectangle base and height:"<<endl;
+    r.getdim();
+    cout<<"area of rectangle is:"<<r.area();
+
+}
