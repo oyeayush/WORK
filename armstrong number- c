@@ -1,0 +1,29 @@
+#include <iostream>
+#include<conio.h>
+#include<string.h>
+
+using namespace std;
+
+int main()
+{
+   int n,r,sum=0,cube,temp;
+   cout<<"enter number:"<<endl;
+   cin>>n;
+   temp=n;
+   while(n>0)
+   {
+       r=n%10;
+       cube=r*r*r;
+       sum=sum+cube;
+       n=n/10;
+       }
+       if(sum==temp)
+       {
+           cout<<"armstrong number"<<endl;
+       }
+       else
+       {
+           cout<<"invalid selection"<<endl;
+       }
+   }
+
