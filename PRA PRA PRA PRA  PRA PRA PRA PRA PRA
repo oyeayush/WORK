@@ -1,0 +1,654 @@
+........................//Smallest Character in string//..................................
+........................//Smallest Character in string//..................................
+........................//Smallest Character in string//..................................
+........................//Smallest Character in string//..................................
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner sc = new Scanner(System.in);
+        
+        String str = sc.nextLine();
+        
+        char c='x';
+        
+       for(int i = 0;i<str.length();i++)
+       {
+          
+               if(i == 0)
+               {
+                   c = str.charAt(i);
+               }
+               else
+               {
+                   if(c>str.charAt(i))
+                       c = str.charAt(i);
+               }
+           
+       }
+        
+        System.out.println(c);
+    }
+}
+
+........................//Smallest Character in string//..................................
+........................//Smallest Character in string//..................................
+........................//Smallest Character in string//..................................
+........................//Smallest Character in string//..................................
+
+
+........................//add digits//......................................................
+........................//add digits//......................................................
+........................//add digits//......................................................
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner sc = new Scanner(System.in);
+        
+       int x = sc.nextInt();
+       int a = 0;
+        
+        while(x>0)
+        {
+            int c = x%10;
+            a=a+c;
+            
+            x = x/10;
+        }
+        
+        System.out.println(a);
+    }
+}
+
+........................//add digits//......................................................
+........................//add digits//......................................................
+........................//add digits//......................................................
+
+
+
+
+
+.....................//combine docs//....................................................
+.....................//combine docs//....................................................
+.....................//combine docs//....................................................
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        
+        Scanner sc = new Scanner(System.in);
+        Document[] docs = new Document[4];
+        
+        for(int i = 0;i<docs.length;i++)
+        {
+            int id = sc.nextInt();sc.nextLine();
+            String title = sc.nextLine();
+            String folderName = sc.nextLine();
+            int pages = sc.nextInt();
+            
+            docs[i] = new Document(id,title,folderName,pages);
+                      
+        }
+        
+          Document doc = combineDocs(docs);
+            
+            System.out.println(doc.getId());
+            System.out.println(doc.getTitle());
+            System.out.println(doc.getFolderName());
+            System.out.println(doc.getPages());
+    }
+    
+    public static Document combineDocs(Document[] docs)
+    {
+        int id = 0;
+        String title = "";
+        String folderName = "";
+        int pages = 0;
+        
+        for(int i = 0;i<docs.length;i++)
+        {
+            if(id < docs[i].getId()) id = docs[i].getId();
+            
+            if(i == docs.length - 1)
+            {
+                title += docs[i].getTitle();
+                folderName += docs[i].getFolderName();
+            }
+            else
+            {
+                title += docs[i].getTitle()+"#";
+                folderName += docs[i].getFolderName()+"@";
+            }
+            
+            pages += docs[i].getPages();
+        }
+        
+        id++;
+        
+        Document doc = new Document(id, title, folderName,pages);
+        
+        return doc;
+    }
+}
+
+class Document
+{
+    private int id;
+    private String title;
+    private String folderName;
+    private int pages;
+    
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getFolderName() {
+		return folderName;
+	}
+
+	public void setFolderName(String folderName) {
+		this.folderName = folderName;
+	}
+
+	public int getPages() {
+		return pages;
+	}
+
+	public void setPages(int pages) {
+		this.pages = pages;
+	}
+
+	public Document(int id, String title, String folderName, int pages)
+    {
+        this.id = id;
+        this.title = title;
+        this.folderName = folderName;
+        this.pages = pages;
+    }
+}
+
+.....................//combine docs//....................................................
+.....................//combine docs//....................................................
+.....................//combine docs//....................................................
+.....................//combine docs//....................................................
+
+
+
+
+
+
+
+.................//largest character//..................................................................//
+.................//largest character//..................................................................//
+.................//largest character//.................................................
+.................//largest character//.................................................
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner sc = new Scanner(System.in);
+        
+        String str = sc.nextLine();
+        
+        char c='x';
+        
+       for(int i = 0;i<str.length();i++)
+       {
+          
+               if(i == 0)
+               {
+                   c = str.charAt(i);
+               }
+               else
+               {
+                   if(c<str.charAt(i))
+                       c = str.charAt(i);
+               }
+           
+       }
+        
+        System.out.println(c);
+    }
+}
+
+
+.................//largest character//..................................................................//
+.................//largest character//..................................................................//
+.................//largest character//..................................................................//
+.................//largest character//..................................................................//
+
+
+
+
+
+
+
+....................//reverse digits../////////////..................................................
+....................//reverse digits../////////////..................................................
+....................//reverse digits../////////////..................................................
+....................//reverse digits../////////////.................................................
+....................//reverse digits../////////////..................................................
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner sc = new Scanner(System.in);
+        
+       int x = sc.nextInt();
+       String a = "";
+        
+        while(x>0)
+        {
+            int c = x%10;
+            a=a+c;
+            
+            x = x/10;
+        }
+        
+        System.out.println(a);
+    }
+}
+
+
+
+....................//reverse digits../////////////..................................................
+....................//reverse digits../////////////..................................................
+....................//reverse digits../////////////..................................................
+....................//reverse digits../////////////..................................................
+
+
+
+
+....................//find docs with odd pages//.....................................................
+....................//find docs with odd pages//....................................................
+....................//find docs with odd pages//.....................................................
+....................//find docs with odd pages//.....................................................
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+      Scanner sc = new Scanner(System.in);
+        Document[] docs = new Document[4];
+        
+        for(int i = 0;i<docs.length;i++)
+        {
+            int id = sc.nextInt();sc.nextLine();
+            String title = sc.nextLine();
+            String folderName = sc.nextLine();
+            int pages = sc.nextInt();
+            
+            docs[i] = new Document(id,title,folderName,pages);
+                      
+        }
+        
+          Document[] newDocs = docsWithOddPages(docs);
+            
+           for(Document doc:newDocs)
+           {
+               System.out.println(doc.getId() + " " + doc.getTitle() + " " + doc.getFolderName() + " " + doc.getPages());
+           }
+    }
+    
+    public static Document[] docsWithOddPages(Document[] docs)
+    {
+        Document[] newDocs = null;
+        
+        int n = 0;
+        
+        for(Document doc:docs)
+        {
+            if(doc.getPages()%2 == 1) n++;
+        }
+        
+        newDocs = new Document[n];
+        
+        n = 0;
+        
+        for(Document doc:docs)
+        {
+            if(doc.getPages()%2 == 1) newDocs[n++] = doc;
+        }
+        
+        for(int i = 0;i<newDocs.length;i++)
+        {
+            for(int j = 0;j<i;j++)
+            {
+                if(newDocs[i].getId() < newDocs[j].getId())
+                {
+                    Document tmp = newDocs[i];
+                    newDocs[i] = newDocs[j];
+                    newDocs[j] = tmp;
+                }
+            }
+        }
+        
+        return newDocs;
+    }
+}
+
+class Document
+{
+    private int id;
+    private String title;
+    private String folderName;
+	private int pages;
+	
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getFolderName() {
+		return folderName;
+	}
+
+	public void setFolderName(String folderName) {
+		this.folderName = folderName;
+	}
+
+	public int getPages() {
+		return pages;
+	}
+
+	public void setPages(int pages) {
+		this.pages = pages;
+	}
+
+
+    
+    public Document(int id, String title, String folderName, int pages)
+    {
+        this.id = id;
+        this.title = title;
+        this.folderName = folderName;
+        this.pages = pages;
+    }
+}
+
+
+....................//find docs with odd pages//.....................................................
+....................//find docs with odd pages//.....................................................
+....................//find docs with odd pages//.....................................................
+....................//find docs with odd pages//.....................................................
+
+
+
+
+
+....................//no of vowels//................................................................
+....................//no of vowels//................................................................
+....................//no of vowels//................................................................
+....................//no of vowels//................................................................
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner sc = new Scanner(System.in);
+        
+       String str = sc.nextLine();
+        
+        int code = 0;
+        
+        for(int i = 0;i<str.length();i++)
+        {
+            char c = str.toLowerCase().charAt(i);
+            
+            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+                code++;
+        }
+        
+        System.out.println(code);
+    }
+}
+
+
+....................//no of vowels//................................................................
+....................//no of vowels//................................................................
+....................//no of vowels//................................................................
+....................//no of vowels//................................................................
+....................//no of vowels//................................................................
+
+
+
+
+......................//max digit in number..///.....................................................
+......................//max digit in number..///....................................................
+......................//max digit in number..///.....................................................
+......................//max digit in number..///.....................................................
+
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        Scanner sc = new Scanner(System.in);
+        
+       int x = sc.nextInt();
+       int a = 0;
+        
+        while(x>0)
+        {
+            int c = x%10;
+            if(a<c) a = c;
+            
+            x = x/10;
+        }
+        
+        System.out.println(a);
+    }
+}
+
+
+......................//max digit in number..///.....................................................
+......................//max digit in number..///.....................................................
+......................//max digit in number..///.....................................................
+......................//max digit in number..///.....................................................
+
+
+
+
+.....................//sort book by price//...............................................................
+.....................//sort book by price//...............................................................
+.....................//sort book by price//...............................................................
+.....................//sort book by price//...............................................................
+.....................//sort book by price//...............................................................
+
+
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String args[] ) throws Exception {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+        
+        Book[] books = new Book[4];
+       
+        
+        Scanner sc = new Scanner(System.in);
+        
+        for(int i = 0;i<books.length;i++)
+        {
+            int id = sc.nextInt();sc.nextLine();
+            String title = sc.nextLine();
+            String author = sc.nextLine();
+            
+            double price = sc.nextDouble();
+            
+            books[i]= new Book(id,title,author,price);
+        }
+      
+        
+        sortBooksByPrice(books);
+        
+       
+        for(Book b:books)
+        {
+           System.out.println(b.getId()+" "+b.getTitle()+ " " + b.getAuthor()+ " "+ b.getPrice());
+        }
+        
+       
+    }
+    
+    public static void sortBooksByPrice(Book[] books)
+    {
+        
+        for(int i = 0;i<books.length;i++)
+        {
+            for(int j = 0;j<i;j++)
+            {
+                if(books[i].getPrice() < books[j].getPrice())
+                {
+                    Book tmp = books[i];
+                    books[i] = books[j];
+                    books[j] = tmp;
+                }
+            }
+        }
+        
+        
+    }
+}
+
+class Book
+{
+       
+        private int id;
+        private String title;
+        private String author;
+        private double price; 
+        public int getId() {
+			return id;
+		}
+
+		public void setId(int id) {
+			this.id = id;
+		}
+
+		public String getTitle() {
+			return title;
+		}
+
+		public void setTitle(String title) {
+			this.title = title;
+		}
+
+		public String getAuthor() {
+			return author;
+		}
+
+		public void setAuthor(String author) {
+			this.author = author;
+		}
+
+		public double getPrice() {
+			return price;
+		}
+
+		public void setPrice(double price) {
+			this.price = price;
+		}
+
+		
+    
+    public Book(int id, String title, String author, double price)
+    {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+}
+
+
+
+.....................//sort book by price//...............................................................
+.....................//sort book by price//...............................................................
+.....................//sort book by price//...............................................................
+.....................//sort book by price//...............................................................
+.....................//sort book by price//...............................................................
